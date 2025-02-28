@@ -687,7 +687,7 @@ impl crate::FromBufRead for Io {
 }
 
 /// Describes a file descriptor opened by a process.
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, PartialEq)]
 #[cfg_attr(feature = "serde1", derive(Serialize, Deserialize))]
 pub enum FDTarget {
     /// A file or device
